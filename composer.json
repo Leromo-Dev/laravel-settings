@@ -1,0 +1,42 @@
+{
+    "name": "leromo/laravel-settings",
+    "description": "Leromo settings module for Laravel projects like SnippetCMS",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leromo",
+            "email": "leromo.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leromo\\LaravelSettings\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Leromo\\LaravelSettings\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leromo\\LaravelSettings\\SettingsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
